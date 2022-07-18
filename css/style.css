@@ -174,7 +174,7 @@ article p{
 
 
 	.nav{
-	background-color: rgba(29, 85, 131, 0.7);
+	background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(26,9,121,1) 35%, rgba(0,212,255,1) 100%);
 	top: 0;
 	position: sticky;	
 	display: flex;
@@ -214,7 +214,7 @@ article p{
 
 @media (min-width: 1024px){
 	.conte{
-       	grid-template-columns: 2fr 4fr 8fr;
+       	grid-template-columns: 2fr 4fr 2fr;
         grid-template-areas: 
         "nav nav nav"
  	    "header header header" 
@@ -398,8 +398,9 @@ article p{
 }
 
 
-.empresas__img{
+.empresas__img:hover{
 	  margin-right: 20px;
+      transform: translatey(20px);
 	  
 }
 
@@ -783,6 +784,7 @@ article p{
 	flex-direction: row;
 	justify-content: center;
     align-items: center;
+    color: black;
 }
 
 .historia__articulo{
@@ -793,6 +795,26 @@ article p{
     justify-content: space-between;
     align-items: center;
 	
+}
+
+@keyframes animacion{
+   0%{background: white; width: 200px;}
+   25%{background: yellow; width: 200px;}
+   50%{background: blue; width: 300px;}
+   75%{background: white; width: 200px;}  
+   100%{background: yellow; width: 300px;}  
+
+
+}
+
+.historia__titulo--xl{
+    animation-name: animacion;
+    animation-iteration-count: initial;
+    animation-timing-function: ease-in-out;
+    animation-duration: 8s;
+    animation-delay: 0;
+
+
 }
 
 .contehistoria{
